@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Tracker */
+
+.trackerHeader {
+  text-align: center;
+}
+
+.countryDropdown {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.trackerContainer {
+  position: relative;
+  left: 46%;
+  transform: translateX(-30%);
+}
+
+.statContainer {
+  margin-top: 40%;
+  justify-content: space-between;
+}
+
+@media (max-width: 990px) {
+  .trackerContainer {
+    flex-direction: column;
+  }
+}
+
+.stats {
+  position: relative;
+  left: -30%;
+}
+
+.statBox {
+  transition: border-right 1s linear;
+}
+
+.map {
+  height: 500px;
+  width: 60%;
+  background-color: rgb(252, 252, 252);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+}
+
+.map .leaflet-container {
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.info-flag img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.info-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+.info-container {
+  width: 150px;
+}
+
+.info-flag {
+  height: 80px;
+
+  border: 2px solid rgb(226, 226, 226);
+  width: 100%;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.chart {
+  width: 60%;
+  background-color: rgb(252, 252, 252);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.statBox {
+  background-color: rgb(250, 250, 250) !important;
+  cursor: pointer;
+}
+
+.statBox:hover {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.select {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Modal */
+
+.modalCard {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.modalCard-items {
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.modalChart {
+  align-items: center;
+  justify-content: center;
+}
+
+.countryFlag {
+  width: 50px;
+  margin-left: 10px;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+}
+
+/* Carousel / Slideshow */
+
+.carouselImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-top: 0;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  text-decoration: none;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.articleLink {
+  color: white;
+  text-decoration: none;
+}
+
+.articleLink:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  padding: 20px 10px;
+}
+.navbar,
+.navbar_2 ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif !important;
+  color: black;
+}
+
+.navbar-brand:hover {
+  color: black;
+}
+
+.nav-link {
+  color: black !important;
+}
+
+.navbar {
+  margin-left: 80px;
+  margin-right: 60px;
+}
+
+.navbar_2 ul {
+  margin-top: 11px;
+}
+
+.navbar_2 ul li {
+  list-style-type: none;
+  padding: 0 15px;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 60px;
+  width: 60px;
+}
+
+.navbar-brand {
+  text-decoration: none;
+}
+
+/* Data Source */
+
+.card {
+  width: 40%;
+  margin: auto;
+}
+
+@media (max-width: 730px) {
+  .card {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.datasource-wrapper {
+  -webkit-animation: pop-in 1.5s;
+  -moz-animation: pop-in 1.5s;
+  -ms-animation: pop-in 1.5s;
+  animation: pop-in 1.5s;
+}
+
+.datasource-notviewport {
+  transform: scale(0.8);
+}
+.datasource-normal {
+  transform: scale(1);
+}
+
+/* Footer */
+
+.footer p {
+  width: 100%;
+  color: gray;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #2098d1;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Grow Shadow */
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.linkIcon {
+  color: black;
+}
+
+.linkIcon:hover {
+  color: #0d6efd;
+}
+
+/* Safety & Info page */
+
+.accordionContainer {
+  margin-left: 10%;
+  margin-right: 10%;
+}
